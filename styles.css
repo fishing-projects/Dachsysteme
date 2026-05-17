@@ -525,7 +525,9 @@ p {
 }
 
 /* --- Badge Bar --- */
+/* Issue #13: Kennzahlen vorerst ausgeblendet (Zahlen noch nicht final) */
 .badge-bar {
+  display: none;
   background: var(--bg-dark);
   padding: var(--space-12) 0;
 }
