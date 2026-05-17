@@ -1022,7 +1022,7 @@ p {
 .cta-bar {
   background:
     linear-gradient(105deg, rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.5)),
-    url('images/ASTRA-Dachmodule_Ambiente-05.jpg') center / cover no-repeat;
+    url('images/ASTRA-Dachmodule_Ambiente-05.webp') center / cover no-repeat;
 }
 
 .cta-bar__inner {
