@@ -3,6 +3,23 @@
    Design System + Landing Page Styles
    ============================================ */
 
+/* --- Lokale Fonts --- */
+@font-face { font-family: 'Montserrat'; src: url('Fonts/Montserrat/montserrat-v15-latin-regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('Fonts/Montserrat/montserrat-v15-latin-italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('Fonts/Montserrat/montserrat-v15-latin-200.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('Fonts/Montserrat/montserrat-v15-latin-300.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('Fonts/Montserrat/montserrat-v15-latin-500.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('Fonts/Montserrat/montserrat-v15-latin-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('Fonts/Montserrat/montserrat-v15-latin-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('Fonts/Montserrat/montserrat-v15-latin-800.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('Fonts/Montserrat/montserrat-v15-latin-900.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('Fonts/dm-sans-cufonfonts/DMSans-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('Fonts/dm-sans-cufonfonts/DMSans-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('Fonts/dm-sans-cufonfonts/DMSans-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('Fonts/dm-sans-cufonfonts/DMSans-MediumItalic.ttf') format('truetype'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('Fonts/dm-sans-cufonfonts/DMSans-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('Fonts/dm-sans-cufonfonts/DMSans-BoldItalic.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+
 /* --- CSS Custom Properties (Design Tokens) --- */
 :root {
   /* Brand Colors */
