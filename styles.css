@@ -402,6 +402,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
   padding: var(--space-4);
   opacity: 1;
   visibility: visible;
@@ -415,7 +416,7 @@ p {
 }
 
 .hero-popup__backdrop {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
 }
@@ -423,8 +424,8 @@ p {
 .hero-popup__box {
   position: relative;
   z-index: 1;
-  width: 100%;
-  max-width: 420px;
+  flex: 0 0 auto;
+  margin: auto;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
   overflow: hidden;
@@ -433,8 +434,10 @@ p {
 
 .hero-popup__img {
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
+  max-width: min(420px, calc(100vw - var(--space-8)));
+  max-height: calc(100vh - var(--space-8));
 }
 
 .hero-popup__close {
@@ -1299,7 +1302,6 @@ p {
   .nav__toggle { display: block; }
   .nav { padding: 0.5rem 1rem; }
 
-  .hero-popup__box { max-width: 90vw; }
   .hero-popup__close { width: 40px; height: 40px; font-size: 1.25rem; }
 
   .hero-split__inner { margin-left: 0; }
