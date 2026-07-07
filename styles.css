@@ -121,6 +121,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.hero-popup-open {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -388,6 +392,76 @@ p {
 .nav__mobile-link:hover {
   background: var(--bg-light-gray);
   color: var(--brand-color);
+}
+
+/* --- Hero Popup --- */
+.hero-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--transition-medium), visibility var(--transition-medium);
+}
+
+.hero-popup--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hero-popup__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-popup__box {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.hero-popup__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-popup__close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--bg-dark);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.hero-popup__close:hover {
+  background: var(--brand-color);
+  color: var(--white);
+  transform: scale(1.05);
 }
 
 /* --- Hero Split --- */
@@ -1224,6 +1298,9 @@ p {
   .nav__links { display: none; }
   .nav__toggle { display: block; }
   .nav { padding: 0.5rem 1rem; }
+
+  .hero-popup__box { max-width: 90vw; }
+  .hero-popup__close { width: 40px; height: 40px; font-size: 1.25rem; }
 
   .hero-split__inner { margin-left: 0; }
   .trust-badges { flex-direction: row; flex-wrap: wrap; gap: var(--space-3); }
