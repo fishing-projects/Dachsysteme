@@ -5,6 +5,26 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ---- Hero Popup ----
+  const heroPopup = document.getElementById('hero-popup');
+  const heroPopupClose = document.getElementById('hero-popup-close');
+  const heroPopupBackdrop = document.getElementById('hero-popup-backdrop');
+
+  if (heroPopup && heroPopupClose && heroPopupBackdrop) {
+    document.body.classList.add('hero-popup-open');
+
+    const closeHeroPopup = () => {
+      heroPopup.classList.add('hero-popup--hidden');
+      document.body.classList.remove('hero-popup-open');
+    };
+
+    heroPopupClose.addEventListener('click', closeHeroPopup);
+    heroPopupBackdrop.addEventListener('click', closeHeroPopup);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeHeroPopup();
+    });
+  }
+
   // ---- Intersection Observer ----
   const observerOptions = {
     root: null,
