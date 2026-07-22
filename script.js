@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroPopupClose = document.getElementById('hero-popup-close');
   const heroPopupBackdrop = document.getElementById('hero-popup-backdrop');
 
-  if (heroPopup && heroPopupClose && heroPopupBackdrop) {
+  if (heroPopup && heroPopupClose && heroPopupBackdrop && !heroPopup.classList.contains('hero-popup--off')) {
     document.body.classList.add('hero-popup-open');
 
     const closeHeroPopup = () => {

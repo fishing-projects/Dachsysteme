@@ -409,6 +409,10 @@ p {
   transition: opacity var(--transition-medium), visibility var(--transition-medium);
 }
 
+.hero-popup--off {
+  display: none;
+}
+
 .hero-popup--hidden {
   opacity: 0;
   visibility: hidden;
