@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---- Active Nav on Scroll ----
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav__link');
+  const navLinks = document.querySelectorAll('.nav__link[href^="#"]');
 
   window.addEventListener('scroll', () => {
     let current = '';
@@ -168,5 +168,33 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, { passive: true });
+
+  // ---- Konfigurator-Teaser: Modellauswahl ----
+  const picker = document.getElementById('config-picker');
+  if (picker) {
+    const img = picker.querySelector('.config-picker__media img');
+    const label = picker.querySelector('.config-picker__label');
+    const desc = picker.querySelector('.config-picker__desc');
+    const cta = picker.querySelector('.config-picker__cta');
+    const chips = picker.querySelectorAll('.config-chip');
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        if (chip.classList.contains('active')) return;
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+
+        img.classList.add('is-fading');
+        setTimeout(() => {
+          img.src = chip.dataset.img;
+          img.alt = `${chip.dataset.model} Dachmodul`;
+          img.classList.remove('is-fading');
+        }, 250);
+        label.textContent = chip.dataset.model;
+        desc.textContent = chip.dataset.desc;
+        cta.textContent = `${chip.dataset.model} konfigurieren →`;
+      });
+    });
+  }
 
 });

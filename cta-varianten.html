@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>CTA-Varianten Konfigurator | Vorschau</title>
+  <link rel="stylesheet" href="styles.css?v=20261003">
+  <style>
+    /* Nur für die Vorschau – wird nach der Auswahl gelöscht */
+    .variant-label { position: relative; z-index: 2; background: var(--bg-dark); color: var(--white); font-family: var(--font-heading); font-weight: 800; padding: var(--space-3) var(--space-6); font-size: var(--text-sm); letter-spacing: 0.05em; }
+    .variant-label span { color: var(--brand-color); }
+    .variant-context { background: var(--bg-light-gray); padding: var(--space-8) 0; text-align: center; color: var(--text-light); font-size: var(--text-sm); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" id="logo-link">
+        <img src="images/Steffes Dachsysteme Logo freigestellt.svg" alt="Steffes Dachsysteme Logo">
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html#ueber" class="nav__link">Über uns</a></li>
+        <li><a href="index.html#produkte" class="nav__link">Produkte</a></li>
+        <li><a href="index.html#technik" class="nav__link">Technik</a></li>
+        <li><a href="index.html#zubehoer" class="nav__link">Zubehör</a></li>
+        <li><a href="konfigurator.html" class="nav__link">Konfigurator</a></li>
+        <li><a href="index.html#kontakt" class="nav__cta">Angebot anfordern</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobile-menu">
+      <a href="index.html#ueber" class="nav__mobile-link">Über uns</a>
+      <a href="index.html#produkte" class="nav__mobile-link">Produkte</a>
+      <a href="index.html#technik" class="nav__mobile-link">Technik</a>
+      <a href="index.html#zubehoer" class="nav__mobile-link">Zubehör</a>
+      <a href="konfigurator.html" class="nav__mobile-link">Konfigurator</a>
+      <a href="index.html#kontakt" class="nav__mobile-link nav__cta">Angebot anfordern</a>
+    </div>
+  </nav>
+
+  <div style="height: 4rem;"></div>
+
+  <!-- ================================================= -->
+  <div class="variant-label" id="variante-a">VARIANTE <span>A</span> – Split-Teaser mit Browser-Mockup</div>
+  <div class="variant-context">… Ende Produktlinien (grauer Bereich) …</div>
+
+  <section class="section section--light" id="konfigurator-teaser-a">
+    <div class="container">
+      <div class="config-split">
+        <div class="browser-mockup animate-in">
+          <div class="browser-mockup__bar">
+            <span class="browser-mockup__dot"></span><span class="browser-mockup__dot"></span><span class="browser-mockup__dot"></span>
+            <span class="browser-mockup__url">steffes-dachsysteme.de/konfigurator</span>
+          </div>
+          <div class="browser-mockup__screen">
+            <img src="images/ASTRA_Dachmodul_Ambiente-01.webp" alt="Vorschau des Dach-Konfigurators mit ASTRA Dachmodul" loading="lazy">
+            <div class="browser-mockup__panel" aria-hidden="true">
+              <strong>ASTRA</strong>
+              Farbe
+              <div class="browser-mockup__swatches">
+                <span style="background:#383e42"></span><span style="background:#8f4e35"></span><span style="background:#5b5b5b"></span><span style="background:#1e1e1e"></span>
+              </div>
+              <div class="browser-mockup__line"></div>
+              <div class="browser-mockup__line browser-mockup__line--short"></div>
+              <div class="browser-mockup__btn">Angebot anfordern</div>
+            </div>
+          </div>
+        </div>
+        <div class="config-split__text animate-in">
+          <span class="section-header__tag">Neu: Dach-Konfigurator</span>
+          <h2>Ihr Wunschdach – <span class="text-brand">online konfiguriert.</span></h2>
+          <p>Stellen Sie Ihr FEDURA Metalldach in wenigen Minuten selbst zusammen. Wir melden uns anschließend mit Ihrem persönlichen Angebot.</p>
+          <ul class="config-teaser__checks">
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Dachmodul wählen</li>
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Farbe &amp; Maße festlegen</li>
+            <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Unverbindliches Angebot erhalten</li>
+          </ul>
+          <a href="konfigurator.html" class="btn btn--brand btn--large">Jetzt konfigurieren →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="variant-context">… „In vier Schritten zum Traumdach“ …</div>
+
+  <!-- ================================================= -->
+  <div class="variant-label" id="variante-b">VARIANTE <span>B</span> – Deep-Blue Prozess-Banner</div>
+  <div class="variant-context">… Ende Produktlinien (grauer Bereich) …</div>
+
+  <section class="config-banner" id="konfigurator-teaser-b">
+    <svg class="config-banner__roof" viewBox="0 0 600 300" fill="none" stroke="currentColor" stroke-width="14" stroke-linejoin="round" aria-hidden="true">
+      <path d="M20 280 L300 40 L580 280"/><path d="M90 280 L300 100 L510 280"/><path d="M160 280 L300 160 L440 280"/>
+    </svg>
+    <div class="container">
+      <div class="config-banner__inner">
+        <div class="config-banner__title animate-in">
+          <span class="section-header__tag section-header__tag--light">Dach-Konfigurator</span>
+          <h2>In 3 Minuten zum <em class="text-brand">Wunschdach.</em></h2>
+          <p>Online konfigurieren, unverbindlich anfragen.</p>
+        </div>
+        <ol class="config-banner__steps animate-in">
+          <li><span class="config-banner__num">01</span>Modell<small>ASTRA, LUNA, VEGA …</small></li>
+          <li><span class="config-banner__num">02</span>Farbe &amp; Maße<small>Passgenau geplant</small></li>
+          <li><span class="config-banner__num">03</span>Angebot<small>Persönlich von uns</small></li>
+        </ol>
+        <div class="animate-in">
+          <a href="konfigurator.html" class="btn btn--brand btn--large">Konfigurator starten →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="variant-context">… „In vier Schritten zum Traumdach“ …</div>
+
+  <!-- ================================================= -->
+  <div class="variant-label" id="variante-c">VARIANTE <span>C</span> – Interaktive Modellauswahl</div>
+  <div class="variant-context">… Ende Produktlinien (grauer Bereich) …</div>
+
+  <section class="section section--light" id="konfigurator-teaser-c">
+    <div class="container">
+      <div class="config-picker animate-in" id="config-picker">
+        <div class="config-picker__media">
+          <img src="images/ASTRA_Dachmodul_Ambiente-01.webp" alt="ASTRA Dachmodul" loading="lazy">
+          <span class="config-picker__label">ASTRA</span>
+        </div>
+        <div class="config-picker__body">
+          <span class="section-header__tag">Dach-Konfigurator</span>
+          <h2>Welches Dach passt <span class="text-brand">zu Ihnen?</span></h2>
+          <p>Wählen Sie ein Modell und starten Sie direkt mit Ihrer Konfiguration.</p>
+          <div class="config-picker__chips" role="group" aria-label="Dachmodul auswählen">
+            <button type="button" class="config-chip active" data-model="ASTRA" data-img="images/ASTRA_Dachmodul_Ambiente-01.webp" data-desc="Elegantes Profildesign mit exzellenter Regenwasserableitung und hoher Windsogsicherheit.">ASTRA</button>
+            <button type="button" class="config-chip" data-model="LUNA" data-img="images/LUNA_Dachmodul_Ambiente_01.webp" data-desc="Vielseitiges Standardmodul mit vorgestanzten Montagelöchern und Prägung.">LUNA</button>
+            <button type="button" class="config-chip" data-model="VEGA" data-img="images/VEGA_Dachmodul_Ambiente-02.webp" data-desc="Hochwertige Dachmodul-Serie für den klassisch-modernen Gebäudeentwurf.">VEGA</button>
+            <button type="button" class="config-chip" data-model="DIADEM" data-img="images/DIADEM_Dachmodul_Ambiente-01.webp" data-desc="Premium-Dachmodul mit außergewöhnlicher Formgebung und Langlebigkeit.">DIADEM</button>
+            <button type="button" class="config-chip" data-model="STELLA" data-img="images/STELLA_Dachmodul_Ambiente_Detail-02.webp" data-desc="Kompaktes Dachmodul für detaillierte architektonische Anforderungen.">STELLA</button>
+          </div>
+          <p class="config-picker__desc">Elegantes Profildesign mit exzellenter Regenwasserableitung und hoher Windsogsicherheit.</p>
+          <a href="konfigurator.html" class="btn btn--brand btn--large config-picker__cta">ASTRA konfigurieren →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="variant-context">… „In vier Schritten zum Traumdach“ …</div>
+
+  <script src="script.js?v=20261003"></script>
+</body>
+</html>

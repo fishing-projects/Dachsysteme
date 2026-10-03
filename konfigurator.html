@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Der Steffes Dach-Konfigurator: Dachmodul wählen, Farbe und Maße festlegen und unverbindlich ein Angebot für Ihr Metalldach anfordern.">
+  <title>Dach-Konfigurator | Steffes Dachsysteme</title>
+  <link rel="stylesheet" href="styles.css?v=20261003">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/Steffes Dachsysteme Logo freigestellt.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" href="images/Steffes-dachsysteme-favicon-192px.png">
+  <link rel="apple-touch-icon" href="images/Steffes-dachsysteme-favicon-192px.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://steffes-dachsysteme.de/konfigurator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://steffes-dachsysteme.de/konfigurator.html">
+  <meta property="og:title" content="Dach-Konfigurator | Steffes Dachsysteme">
+  <meta property="og:description" content="Konfigurieren Sie Ihr modulares Metalldach online – Modell, Farbe und Maße wählen und unverbindlich anfragen.">
+  <meta property="og:image" content="https://steffes-dachsysteme.de/images/ASTRA_Dachmodul_Ambiente-01.webp">
+</head>
+<body>
+
+  <nav class="nav" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" id="logo-link">
+        <img src="images/Steffes Dachsysteme Logo freigestellt.svg" alt="Steffes Dachsysteme Logo">
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html#ueber" class="nav__link">Über uns</a></li>
+        <li><a href="index.html#produkte" class="nav__link">Produkte</a></li>
+        <li><a href="index.html#technik" class="nav__link">Technik</a></li>
+        <li><a href="index.html#zubehoer" class="nav__link">Zubehör</a></li>
+        <li><a href="konfigurator.html" class="nav__link nav__link--active" aria-current="page">Konfigurator</a></li>
+        <li><a href="#kontakt" class="nav__cta">Angebot anfordern</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobile-menu">
+      <a href="index.html#ueber" class="nav__mobile-link">Über uns</a>
+      <a href="index.html#produkte" class="nav__mobile-link">Produkte</a>
+      <a href="index.html#technik" class="nav__mobile-link">Technik</a>
+      <a href="index.html#zubehoer" class="nav__mobile-link">Zubehör</a>
+      <a href="konfigurator.html" class="nav__mobile-link" aria-current="page">Konfigurator</a>
+      <a href="#kontakt" class="nav__mobile-link nav__cta">Angebot anfordern</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== PAGE HEADER ===== -->
+    <header class="page-hero section--gray">
+      <div class="container">
+        <div class="page-hero__inner">
+          <div class="page-hero__text animate-in">
+            <span class="section-header__tag">Dach-Konfigurator</span>
+            <h1>Ihr Dach. <span class="text-brand">Ihre Konfiguration.</span></h1>
+            <p>Wählen Sie Dachmodul, Farbe und Maße – und erhalten Sie anschließend Ihr unverbindliches Angebot direkt von uns.</p>
+          </div>
+          <ol class="config-steps animate-in">
+            <li><span>01</span>Modell wählen</li>
+            <li><span>02</span>Farbe &amp; Maße</li>
+            <li><span>03</span>Angebot erhalten</li>
+          </ol>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== KONFIGURATOR (iframe) ===== -->
+    <section class="configurator-section section--gray" id="konfigurator">
+      <div class="container">
+        <div class="configurator-frame" id="configurator-frame">
+          <!-- KONFIGURATOR-URL: hier src="https://..." eintragen, dann blendet sich der Platzhalter automatisch aus -->
+          <iframe id="configurator-iframe"
+                  title="Steffes Dach-Konfigurator"
+                  loading="lazy"
+                  allow="fullscreen"
+                  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <div class="configurator-frame__placeholder">
+            <div class="configurator-frame__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3>Der Konfigurator wird in Kürze freigeschaltet.</h3>
+            <p>Bis dahin beraten wir Sie gerne persönlich – rufen Sie uns an oder senden Sie uns Ihre Anfrage.</p>
+            <div class="configurator-frame__actions">
+              <a href="tel:+49657494775" class="btn btn--brand btn--large">✆ 06574 94775</a>
+              <a href="mailto:info@steffes-dachsysteme.de" class="btn btn--outline btn--large">Anfrage senden</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BAR ===== -->
+    <section class="section cta-bar" id="kontakt">
+      <div class="container">
+        <div class="cta-bar__inner animate-in">
+          <div class="cta-bar__content">
+            <span class="section-header__tag">Persönliche Beratung</span>
+            <h2 class="text-white">Fragen zu Ihrer<br><em class="text-brand">Konfiguration</em>?</h2>
+            <p class="cta-bar__desc">Rufen Sie uns direkt an, schreiben Sie uns — wir beraten Sie persönlich und unverbindlich.</p>
+            <div class="cta-bar__actions">
+              <a href="tel:+49657494775" class="btn btn--brand btn--large">✆ 06574 94775</a>
+              <a href="mailto:info@steffes-dachsysteme.de" class="btn btn--outline-white btn--large">Anfrage senden</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <img src="images/Steffes Logo freigestellt.png" alt="Steffes Dachsysteme" class="footer__logo">
+          <p>Modulare Metalldachsysteme in<br>Premium-Qualität.</p>
+          <p style="margin-top: 1rem;">Hauptstraße 58 · 54558 Mückeln</p>
+        </div>
+        <div class="footer__col"><h5 class="footer__heading">Dachmodule</h5><a href="index.html#produkte" class="footer__link">ASTRA</a><a href="index.html#produkte" class="footer__link">LUNA</a><a href="index.html#produkte" class="footer__link">VEGA</a><a href="index.html#produkte" class="footer__link">DIADEM</a><a href="index.html#produkte" class="footer__link">STELLA</a></div>
+        <div class="footer__col"><h5 class="footer__heading">Navigation</h5><a href="index.html#ueber" class="footer__link">Das Komplettsystem</a><a href="index.html#produkte" class="footer__link">Unsere Dachmodule</a><a href="index.html#technik" class="footer__link">Technische Details</a><a href="index.html#zubehoer" class="footer__link">Zubehör &amp; Komponenten</a><a href="konfigurator.html" class="footer__link">Dach-Konfigurator</a></div>
+        <div class="footer__col"><h5 class="footer__heading">Kontakt</h5><a href="tel:+49657494775" class="footer__link">06574 94775</a><a href="mailto:info@steffes-dachsysteme.de" class="footer__link">info@steffes-dachsysteme.de</a><a href="https://steffes-zaunanlagen.de" class="footer__link">steffes-zaunanlagen.de</a></div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Steffes Zaunanlagen & Steffes Dachsysteme. Alle Rechte vorbehalten.</p>
+        <div class="footer__legal"><a href="Impressum-dachsysteme.html" class="footer__link">Impressum</a><a href="Datenschutz-dachsysteme.html" class="footer__link">Datenschutz</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=20261003"></script>
+</body>
+</html>
