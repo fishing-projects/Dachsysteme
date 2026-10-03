@@ -394,6 +394,20 @@ p {
   color: var(--brand-color);
 }
 
+/* CTA im Mobile-Menü: weiße Schrift auf Rot statt geerbtem Grau */
+.nav__mobile-link.nav__cta {
+  margin-left: 0;
+  margin-top: var(--space-2);
+  color: var(--white);
+  text-align: center;
+  border-radius: var(--radius-pill);
+}
+
+.nav__mobile-link.nav__cta:hover {
+  background-color: var(--bg-deep);
+  color: var(--white);
+}
+
 /* --- Hero Popup --- */
 .hero-popup {
   position: fixed;
