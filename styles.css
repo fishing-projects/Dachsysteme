@@ -1366,6 +1366,39 @@ p {
    KONFIGURATOR
    ============================================ */
 
+/* --- Navbar: Konfigurator-Button (nur mobil sichtbar) --- */
+.nav__config-btn {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+  margin-right: var(--space-3);
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--brand-color);
+  border-radius: var(--radius-pill);
+  background: var(--brand-color);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  line-height: 1;
+  box-shadow: var(--shadow-brand);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.nav__config-btn:hover {
+  background: var(--bg-deep);
+  border-color: var(--bg-deep);
+  color: var(--white);
+}
+
+.nav__config-btn--active,
+.nav__config-btn--active:hover {
+  background: var(--white);
+  color: var(--brand-color);
+  box-shadow: none;
+}
+
 /* --- Unterseite: Page Header --- */
 .page-hero {
   padding: calc(var(--section-padding) + 4rem) 0 var(--space-12);
@@ -1859,6 +1892,7 @@ p {
 }
 
 @media (max-width: 768px) {
+  .nav__config-btn { display: inline-flex; }
   .configurator-section .container { padding: 0; }
   .configurator-frame { border-radius: 0; border-left: 0; border-right: 0; }
   .configurator-frame iframe { height: calc(100vh - 4rem); }
@@ -1870,10 +1904,15 @@ p {
 }
 
 @media (max-width: 480px) {
+  .nav__config-btn { padding: 0.5rem 0.875rem; margin-right: var(--space-2); }
   .config-steps { gap: var(--space-5); }
   .config-banner__steps { gap: var(--space-2); }
   .config-banner__steps small { display: none; }
   .configurator-frame__actions { flex-direction: column; width: 100%; }
   .config-split .btn,
   .config-picker .btn { width: 100%; }
+}
+
+@media (max-width: 360px) {
+  .nav__config-btn svg { display: none; }
 }
