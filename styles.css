@@ -1533,13 +1533,6 @@ p {
   font-weight: 600;
 }
 
-.configurator-frame__actions {
-  display: flex;
-  gap: var(--space-4);
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 /* --- Teaser: gemeinsame Bausteine --- */
 .config-teaser__checks {
   list-style: none;
@@ -1562,7 +1555,7 @@ p {
   color: var(--brand-color);
 }
 
-/* --- Variante A: Split-Teaser mit Browser-Mockup --- */
+/* --- Startseite: Konfigurator-Teaser mit Browser-Mockup --- */
 .config-split {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -1663,28 +1656,14 @@ p {
   color: var(--headings);
 }
 
-.browser-mockup__swatches {
-  display: flex;
-  gap: var(--space-2);
-  margin: var(--space-1) 0 var(--space-3);
-}
-
-.browser-mockup__swatches span {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 2px solid var(--white);
-  box-shadow: 0 0 0 1px var(--borders);
-}
-
-.browser-mockup__swatches span:first-child { box-shadow: 0 0 0 2px var(--brand-color); }
-
 .browser-mockup__line {
   height: 6px;
   border-radius: 3px;
   background: var(--borders);
   margin-bottom: var(--space-2);
 }
+
+.browser-mockup__line:first-of-type { margin-top: var(--space-2); }
 
 .browser-mockup__line--short { width: 60%; }
 
@@ -1714,7 +1693,6 @@ p {
 @media (max-width: 480px) {
   .nav__config-btn { padding: 0.5rem 0.875rem; margin-right: var(--space-2); }
   .config-steps { gap: var(--space-5); }
-  .configurator-frame__actions { flex-direction: column; width: 100%; }
   .config-split .btn { width: 100%; }
 }
 
