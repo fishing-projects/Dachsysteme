@@ -169,32 +169,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { passive: true });
 
-  // ---- Konfigurator-Teaser: Modellauswahl ----
-  const picker = document.getElementById('config-picker');
-  if (picker) {
-    const img = picker.querySelector('.config-picker__media img');
-    const label = picker.querySelector('.config-picker__label');
-    const desc = picker.querySelector('.config-picker__desc');
-    const cta = picker.querySelector('.config-picker__cta');
-    const chips = picker.querySelectorAll('.config-chip');
+  // ---- FEDURA-Konfigurator (2-Klick) ----
+  const configFrame = document.getElementById('configurator-frame');
+  const configStart = document.getElementById('configurator-start');
 
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        if (chip.classList.contains('active')) return;
-        chips.forEach(c => c.classList.remove('active'));
-        chip.classList.add('active');
+  if (configFrame && configStart) {
+    const FEDURA_ORIGIN = 'https://partnerkonfigurator.fedura-dach.de';
+    const CONSENT_KEY = 'fedura-consent';
+    const remember = document.getElementById('configurator-remember');
 
-        img.classList.add('is-fading');
-        setTimeout(() => {
-          img.src = chip.dataset.img;
-          img.alt = `${chip.dataset.model} Dachmodul`;
-          img.classList.remove('is-fading');
-        }, 250);
-        label.textContent = chip.dataset.model;
-        desc.textContent = chip.dataset.desc;
-        cta.textContent = `${chip.dataset.model} konfigurieren →`;
+    // Fedura scrollt bei Schrittwechseln zur iframe-Oberkante – wir korrigieren um die fixe Navbar.
+    // Wird erst nach dem Fedura-Listener registriert, damit unser scrollTo zuletzt greift.
+    const fixScrollOffset = () => {
+      window.addEventListener('message', (event) => {
+        const iframe = configFrame.querySelector('#fedura-widget iframe');
+        if (event.origin !== FEDURA_ORIGIN || !iframe || event.source !== iframe.contentWindow) return;
+        if (!event.data || event.data.type !== 'fedura-konfigurator:scroll-to-iframe') return;
+
+        const offset = Number(event.data.offset) || 0;
+        const innerTop = Number(event.data.targetTop) || 0;
+        const iframeTop = iframe.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: Math.max(0, Math.ceil(iframeTop + innerTop - offset - nav.offsetHeight)),
+          behavior: event.data.behavior === 'auto' ? 'auto' : 'smooth'
+        });
       });
+    };
+
+    const loadConfigurator = () => {
+      if (configFrame.classList.contains('is-loaded')) return;
+      configFrame.classList.add('is-loaded');
+
+      const script = document.createElement('script');
+      script.src = `${FEDURA_ORIGIN}/embed/fedura-konfigurator.js`;
+      script.dataset.customerToken = 'rA-jBCtuDCXhp5wP';
+      script.dataset.target = '#fedura-widget';
+      script.dataset.autoHeight = '1';
+      script.onload = fixScrollOffset;
+      script.onerror = () => {
+        // z. B. Werbeblocker: Box mit Telefon-Alternative wieder zeigen
+        configFrame.classList.remove('is-loaded');
+        script.remove();
+      };
+      document.body.appendChild(script);
+    };
+
+    configStart.addEventListener('click', () => {
+      if (remember && remember.checked) {
+        try { sessionStorage.setItem(CONSENT_KEY, '1'); } catch (e) { /* Speicher gesperrt */ }
+      }
+      loadConfigurator();
     });
+
+    try {
+      if (sessionStorage.getItem(CONSENT_KEY) === '1') loadConfigurator();
+    } catch (e) { /* Speicher gesperrt */ }
   }
 
 });

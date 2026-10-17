@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Der Steffes Dach-Konfigurator: Dachmodul wählen, Farbe und Maße festlegen und unverbindlich ein Angebot für Ihr Metalldach anfordern.">
   <title>Dach-Konfigurator | Steffes Dachsysteme</title>
-  <link rel="stylesheet" href="styles.css?v=20261003b">
+  <link rel="stylesheet" href="styles.css?v=20261017">
 
   <!-- Favicon -->
   <link rel="icon" href="images/Steffes Dachsysteme Logo freigestellt.svg" type="image/svg+xml">
@@ -71,26 +71,24 @@
       </div>
     </header>
 
-    <!-- ===== KONFIGURATOR (iframe) ===== -->
+    <!-- ===== KONFIGURATOR (FEDURA-Embed, 2-Klick) ===== -->
     <section class="configurator-section section--gray" id="konfigurator">
       <div class="container">
         <div class="configurator-frame" id="configurator-frame">
-          <!-- KONFIGURATOR-URL: hier src="https://..." eintragen, dann blendet sich der Platzhalter automatisch aus -->
-          <iframe id="configurator-iframe"
-                  title="Steffes Dach-Konfigurator"
-                  loading="lazy"
-                  allow="fullscreen"
-                  referrerpolicy="strict-origin-when-cross-origin"></iframe>
-          <div class="configurator-frame__placeholder">
+          <!-- Das FEDURA-Skript erzeugt hier erst nach Klick auf "Konfigurator starten" das iframe (siehe script.js) -->
+          <div id="fedura-widget"></div>
+          <div class="configurator-frame__placeholder" id="configurator-consent">
             <div class="configurator-frame__icon">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             </div>
-            <h3>Der Konfigurator wird in Kürze freigeschaltet.</h3>
-            <p>Bis dahin beraten wir Sie gerne persönlich – rufen Sie uns an oder senden Sie uns Ihre Anfrage.</p>
-            <div class="configurator-frame__actions">
-              <a href="tel:+49657494775" class="btn btn--brand btn--large">✆ 06574 94775</a>
-              <a href="mailto:info@steffes-dachsysteme.de" class="btn btn--outline btn--large">Anfrage senden</a>
-            </div>
+            <h3>Dach-Konfigurator starten</h3>
+            <p class="configurator-frame__privacy">Der Konfigurator wird von unserem Partner FEDURA bereitgestellt. Mit dem Start werden Daten wie Ihre IP-Adresse an dessen Server in Deutschland übertragen. <a href="Datenschutz-dachsysteme.html#fedura-konfigurator">Mehr erfahren</a></p>
+            <button type="button" class="btn btn--brand btn--large" id="configurator-start">Konfigurator starten →</button>
+            <label class="configurator-frame__remember">
+              <input type="checkbox" id="configurator-remember"> Für diesen Besuch merken
+            </label>
+            <noscript><p>Für den Konfigurator wird JavaScript benötigt. Gerne beraten wir Sie auch persönlich.</p></noscript>
+            <p class="configurator-frame__alt">Lieber persönlich? <a href="tel:+49657494775">✆ 06574 94775</a> · <a href="mailto:info@steffes-dachsysteme.de">Anfrage senden</a></p>
           </div>
         </div>
       </div>
@@ -134,6 +132,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20261003b"></script>
+  <script src="script.js?v=20261017"></script>
 </body>
 </html>
