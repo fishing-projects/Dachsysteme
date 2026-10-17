@@ -1361,3 +1361,341 @@ p {
   .accessory-grid { grid-template-columns: repeat(2, 1fr); }
   .cta-bar__actions { flex-direction: column; }
 }
+
+/* ============================================
+   KONFIGURATOR
+   ============================================ */
+
+/* --- Navbar: Konfigurator-Button (nur mobil sichtbar) --- */
+.nav__config-btn {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+  margin-right: var(--space-3);
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--brand-color);
+  border-radius: var(--radius-pill);
+  background: var(--brand-color);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  line-height: 1;
+  box-shadow: var(--shadow-brand);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.nav__config-btn:hover {
+  background: var(--bg-deep);
+  border-color: var(--bg-deep);
+  color: var(--white);
+}
+
+.nav__config-btn--active,
+.nav__config-btn--active:hover {
+  background: var(--white);
+  color: var(--brand-color);
+  box-shadow: none;
+}
+
+/* --- Unterseite: Page Header --- */
+.page-hero {
+  padding: calc(var(--section-padding) + 4rem) 0 var(--space-12);
+}
+
+.page-hero__inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-12);
+}
+
+.page-hero__text {
+  max-width: 640px;
+}
+
+.page-hero__text p {
+  color: var(--text-muted);
+  font-size: var(--text-md);
+  margin-bottom: 0;
+}
+
+.config-steps {
+  display: flex;
+  gap: var(--space-8);
+  list-style: none;
+  flex-shrink: 0;
+}
+
+.config-steps li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-weight: 600;
+  color: var(--headings);
+  font-size: var(--text-sm);
+}
+
+.config-steps span {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: var(--text-2xl);
+  color: var(--brand-color);
+  line-height: 1;
+}
+
+/* --- Unterseite: iframe-Rahmen --- */
+.configurator-section {
+  padding: 0 0 var(--section-padding);
+}
+
+.configurator-frame {
+  position: relative;
+  background: var(--bg-white);
+  border: 1px solid var(--borders);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+/* Fedura-Embed: iframe wird vom Fedura-Skript erzeugt, Höhe kommt per postMessage */
+#fedura-widget iframe {
+  display: block;
+  width: 100%;
+  min-height: 600px;
+}
+
+/* 2-Klick: Hinweis-Box bis zum Start, danach nur noch der Konfigurator */
+.configurator-frame.is-loaded .configurator-frame__placeholder {
+  display: none;
+}
+
+.configurator-frame__placeholder {
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8);
+  background:
+    linear-gradient(rgba(245, 247, 250, 0.93), rgba(245, 247, 250, 0.93)),
+    url('images/ASTRA_Dachmodul_Ambiente-01.webp') center / cover no-repeat;
+}
+
+.configurator-frame__icon {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--brand-color-light);
+  color: var(--brand-color);
+  margin-bottom: var(--space-6);
+}
+
+.configurator-frame__placeholder p {
+  color: var(--text-muted);
+  max-width: 520px;
+  margin-bottom: var(--space-6);
+}
+
+.configurator-frame__privacy a {
+  color: var(--brand-color);
+  text-decoration: underline;
+}
+
+.configurator-frame__remember {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.configurator-frame__remember input {
+  accent-color: var(--brand-color);
+  width: 1rem;
+  height: 1rem;
+}
+
+.configurator-frame__placeholder .configurator-frame__alt {
+  margin: var(--space-8) 0 0;
+  font-size: var(--text-sm);
+}
+
+.configurator-frame__alt a {
+  color: var(--headings);
+  font-weight: 600;
+}
+
+/* --- Teaser: gemeinsame Bausteine --- */
+.config-teaser__checks {
+  list-style: none;
+  margin: var(--space-6) 0 var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.config-teaser__checks li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-weight: 500;
+  color: var(--headings);
+}
+
+.config-teaser__checks svg {
+  flex-shrink: 0;
+  color: var(--brand-color);
+}
+
+/* --- Startseite: Konfigurator-Teaser mit Browser-Mockup --- */
+.config-split {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.config-split__text p {
+  color: var(--text-muted);
+  font-size: var(--text-md);
+}
+
+.browser-mockup {
+  position: relative;
+  z-index: 0;
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.browser-mockup::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--brand-color);
+  border-radius: var(--radius-lg);
+  transform: translate(0.75rem, 0.75rem);
+  z-index: -1;
+  transition: transform var(--transition-medium);
+}
+
+.browser-mockup:hover::before {
+  transform: translate(0, 0);
+}
+
+.browser-mockup__bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-light-gray);
+  border-bottom: 1px solid var(--borders);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.browser-mockup__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--borders);
+}
+
+.browser-mockup__dot:first-child { background: var(--brand-color); }
+
+.browser-mockup__url {
+  flex: 1;
+  margin-left: var(--space-3);
+  padding: var(--space-1) var(--space-3);
+  background: var(--bg-white);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.browser-mockup__screen {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.browser-mockup__screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.browser-mockup__panel {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 42%;
+  padding: var(--space-4);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.browser-mockup__panel strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-2);
+  color: var(--headings);
+}
+
+.browser-mockup__line {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--borders);
+  margin-bottom: var(--space-2);
+}
+
+.browser-mockup__line:first-of-type { margin-top: var(--space-2); }
+
+.browser-mockup__line--short { width: 60%; }
+
+.browser-mockup__btn {
+  margin-top: var(--space-3);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--brand-color);
+  color: var(--white);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* --- Konfigurator Responsive --- */
+@media (max-width: 1024px) {
+  .page-hero__inner { flex-direction: column; align-items: flex-start; gap: var(--space-8); }
+  .config-split { grid-template-columns: 1fr; gap: var(--space-12); }
+}
+
+@media (max-width: 768px) {
+  .nav__config-btn { display: inline-flex; }
+  .configurator-section .container { padding: 0; }
+  .configurator-frame { border-radius: 0; border-left: 0; border-right: 0; }
+  .browser-mockup__panel { display: none; }
+}
+
+@media (max-width: 480px) {
+  .nav__config-btn { padding: 0.5rem 0.875rem; margin-right: var(--space-2); }
+  .config-steps { gap: var(--space-5); }
+  .config-split .btn { width: 100%; }
+}
+
+@media (max-width: 360px) {
+  .nav__config-btn svg { display: none; }
+}
