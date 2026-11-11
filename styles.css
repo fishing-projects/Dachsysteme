@@ -314,6 +314,7 @@ p {
 
 .nav__logo img {
   height: 3rem;
+  width: auto;
 }
 
 .nav__links {
@@ -1134,7 +1135,7 @@ p {
 .cta-bar {
   background:
     linear-gradient(105deg, rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.5)),
-    url('images/ASTRA-Dachmodule_Ambiente-05.webp') center / cover no-repeat;
+    url('images/ASTRA-Dachmodule_Ambiente-05-1280.webp') center / cover no-repeat;
 }
 
 .cta-bar__inner {
@@ -1213,6 +1214,7 @@ p {
 
 .footer__logo {
   height: 3rem;
+  width: auto;
   margin-bottom: 1rem;
 }
 
@@ -1481,7 +1483,7 @@ p {
   padding: var(--space-8);
   background:
     linear-gradient(rgba(245, 247, 250, 0.93), rgba(245, 247, 250, 0.93)),
-    url('images/ASTRA_Dachmodul_Ambiente-01.webp') center / cover no-repeat;
+    url('images/ASTRA_Dachmodul_Ambiente-01-640.webp') center / cover no-repeat;
 }
 
 .configurator-frame__icon {

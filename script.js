@@ -1,5 +1,5 @@
 /* ============================================
-   ENTWURF 2 – JavaScript
+   Steffes Dachsysteme – JavaScript
    Tabs, Scroll Animations, Counter, Navigation
    ============================================ */
 
